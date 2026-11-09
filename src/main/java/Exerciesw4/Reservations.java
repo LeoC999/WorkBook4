@@ -5,7 +5,7 @@ public class Reservations {
     private double price;
     private double numberofNights;
     private boolean weekend;
-    private double reservationTotal;
+
 
     public String getRoomType() {
         return roomType;
