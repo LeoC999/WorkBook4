@@ -6,6 +6,7 @@ public class Employees {
     private String department;
     private double payRate;
     private double hoursworked;
+    private double startTime;
 
     public Employees(String employeeName, String employeeID, String department, double payRate, double hoursworked) {
         this.employeeName = employeeName;
@@ -51,5 +52,12 @@ public class Employees {
     }
     public double getTotalPay() {
         return (getPayRate() * getRegularHoursWorked() + getOverTimeHoursWorked() * getPayRate() * 1.50);
+    }
+    public void getPunchIn(double time) {
+        startTime = time;
+    }
+    public void getPunchOut(double time) {
+        double hours = time - startTime;
+        hoursworked += hours;
     }
 }
