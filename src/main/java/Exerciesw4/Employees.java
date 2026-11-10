@@ -63,7 +63,7 @@ public class Employees {
         hoursworked += hours;
     }
     public void getPunchIn(){
-        hoursworked += (LocalDateTime.now().getHour()-startTime);
+       startTime = (LocalDateTime.now().getHour());
     }
     public void getPunchOut(){
         hoursworked += (LocalDateTime.now().getHour()-startTime);
