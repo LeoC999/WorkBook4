@@ -1,5 +1,7 @@
 package Exerciesw4;
 
+import java.time.LocalDateTime;
+
 public class Employees {
     private String employeeName;
     private String employeeID;
@@ -59,5 +61,11 @@ public class Employees {
     public void getPunchOut(double time) {
         double hours = time - startTime;
         hoursworked += hours;
+    }
+    public void getPunchIn(){
+        hoursworked += (LocalDateTime.now().getHour()-startTime);
+    }
+    public void getPunchOut(){
+        hoursworked += (LocalDateTime.now().getHour()-startTime);
     }
 }
